@@ -27,6 +27,11 @@ function addName(element) {
     //     playerName: playerName,
     // }
 
+    /* button disable after click */
+    element.disabled = true;
+
+
+    /* take a loop for check just 5 players */
     if (nameArray.length < 5) {
         nameArray.push(playerName);
     }
