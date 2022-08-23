@@ -19,12 +19,13 @@ function addName(element) {
     const playerName = element.parentNode.children[0].innerText;
 
     /* button disable after click */
-    element.disabled = true;
+
 
 
     /* take a loop for check just 5 players */
     if (nameArray.length < 5) {
         nameArray.push(playerName);
+        element.disabled = true; // element.disabled = true;
     }
     else {
         alert('Dont be added more than 5 player')
