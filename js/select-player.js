@@ -52,7 +52,10 @@ function getTextElementValueById(elementId) {
 
 document.getElementById('btn-player').addEventListener('click', function () {
     const playerBudget = getInputFieldValueById('player-budget');
-    console.log(playerBudget);
+    if (isNaN(playerBudget)) {
+        alert('Please provide a valid number');
+        return;
+    }
 
     let nameAddedNumber = getTextElementValueById('total-name-add');
     console.log(nameAddedNumber);
@@ -67,10 +70,16 @@ document.getElementById('btn-player').addEventListener('click', function () {
 
 document.getElementById('btn-total').addEventListener('click', function () {
     const managerCost = getInputFieldValueById('manager-cost');
-    console.log(managerCost);
+    if (isNaN(managerCost)) {
+        alert('Please provide a valid number');
+        return;
+    }
 
     const coachCost = getInputFieldValueById('coach-cost');
-    console.log(coachCost);
+    if (isNaN(coachCost)) {
+        alert('Please provide a valid number');
+        return;
+    }
 
     const playerExpensesValue = getTextElementValueById('player-expenses');
 
