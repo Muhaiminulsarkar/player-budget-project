@@ -21,3 +21,7 @@ ol>li {
     margin-top: 12px;
     font-size: large;
 }
+
+#player-names>tr>td {
+    padding-top: 10px;
+}
