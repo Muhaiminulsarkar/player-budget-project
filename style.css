@@ -2,7 +2,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Poppins', sans-serif;
     height: 100vh;
-    background-color: #051124;
+    /* background-color: #051124; */
+    background-color: #290306;
 }
 
 .hero-section {
