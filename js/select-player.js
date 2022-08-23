@@ -42,6 +42,7 @@ function getInputFieldValueById(inputFieldId) {
     return inputFieldValue;
 }
 
+// common function
 function getTextElementValueById(elementId) {
     const textElement = document.getElementById(elementId);
     const textElementValueString = textElement.innerText;
@@ -60,10 +61,21 @@ document.getElementById('btn-player').addEventListener('click', function () {
     console.log(playerExpenses);
 
     const playerExpensesField = document.getElementById('player-expenses');
-    const playerExpensesStringValue = playerExpensesField.innerText;
-    const playerExpensesValue = parseFloat(playerExpensesStringValue);
-
     playerExpensesField.innerText = playerExpenses; //player expense update
 
+})
 
+document.getElementById('btn-total').addEventListener('click', function () {
+    const managerCost = getInputFieldValueById('manager-cost');
+    console.log(managerCost);
+
+    const coachCost = getInputFieldValueById('coach-cost');
+    console.log(coachCost);
+
+    const playerExpensesValue = getTextElementValueById('player-expenses');
+
+    const totalCost = playerExpensesValue + managerCost + coachCost;
+
+    const totalCostField = document.getElementById('total-cost');
+    totalCostField.innerText = totalCost; //total cost update
 })
